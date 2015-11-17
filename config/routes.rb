@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get 'home/index'
 
-  devise_for :users, controllers: { sessions: "users/sessions" }
+  devise_for :users, controllers: { sessions: "users/sessions" } do
+    resources :items, only: [:create]
+  end
 
   root to: "home#show"
   # The priority is based upon order of creation: first created -> highest priority.

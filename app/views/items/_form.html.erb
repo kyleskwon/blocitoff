@@ -1,9 +1,9 @@
-<%= form_for [item] do |f| %>
-  <% if post.errors.any? %>
+<%= form_for @item do |f| %>
+  <% if item.errors.any? %>
    <div class="alert alert-danger">
-     <h4><%= pluralize(post.errors.count, "error") %></h4>
+     <h4><%= pluralize(item.errors.count, "error") %></h4>
      <ul>
-       <% post.errors.full_messages.each do |msg| %>
+       <% item.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
        <% end %>
      </ul>
@@ -18,10 +18,6 @@
     <%= f.label :body %>
     <%= f.text_area :body, rows: 8, class: 'form-control', placeholder: "Enter item body" %>
   <% end %>
-
-  <div class="form-group">
-    <%= render partial: 'labels/form', locals: { f: f, topic: @topic, labels: @post.labels } %>
-  </div>
 
   <div class="form-group">
     <%= f.submit "Save", class: 'btn btn-success' %>

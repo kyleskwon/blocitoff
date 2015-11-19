@@ -4,6 +4,7 @@ source 'https://rubygems.org'
  gem 'rails', '4.2.4'
  gem 'devise'
  gem 'bootstrap-sass'
+ gem 'figaro'
 
  # #1
  group :production do

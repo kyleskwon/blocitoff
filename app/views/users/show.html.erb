@@ -5,4 +5,8 @@
     </div>
   </div>
 </div>
-<%= render current_user.items %>
+<div class="col-md-8">
+  <%= form_for @item.each do |f| %>
+    <%= render partial: 'item' %>
+  <% end %>
+</div>

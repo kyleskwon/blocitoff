@@ -20,13 +20,8 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
-<<<<<<< HEAD
   def item_params
     params.require(:item).permit(:name)
-=======
-  def new
-    @item = Item.new
->>>>>>> 5be62c98e06e8c61e28b3334c91479f121f4094f
   end
 
 end

@@ -10,8 +10,6 @@
         </ul>
     </div>
     <div class="col-md-8">
-      <%= form_for @item do |f| %>
-        <%= render partial: 'form' %>
-      <% end %>
+      <%= render "form", item: @item %>
     </div>
   </div>

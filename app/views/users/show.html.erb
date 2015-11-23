@@ -6,7 +6,5 @@
   </div>
 </div>
 <div class="col-md-8">
-  <%= current_user.item do |f| %>
-    <%= render partial: 'item' %>
-  <% end %>
+  <%= render current_user.items %>
 </div>

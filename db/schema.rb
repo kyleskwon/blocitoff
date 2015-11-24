@@ -21,7 +21,6 @@ ActiveRecord::Schema.define(version: 20151117045554) do
   end
 
   add_index "items", ["user_id"], name: "index_items_on_user_id"
->>>>>>> 5be62c98e06e8c61e28b3334c91479f121f4094f
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

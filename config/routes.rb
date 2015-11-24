@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'users/show'
 
   resources :users, only: [:show]
-  resources :items, only: [:create]
+  resources :items, only: [:create, :index]
 
   root to: "users#show"
 

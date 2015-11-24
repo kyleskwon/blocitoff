@@ -5,14 +5,13 @@ source 'https://rubygems.org'
  gem 'devise'
  gem 'bootstrap-sass'
  gem 'figaro'
+ gem 'faker'
 
- # #1
  group :production do
    gem 'pg'
    gem 'rails_12factor'
  end
 
- # #2
  group :development do
    gem 'sqlite3'
  end

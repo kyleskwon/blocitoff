@@ -6,5 +6,8 @@
   </div>
 </div>
 <div class="col-md-8">
-  <%= render current_user.items %>
+    <%= render current_user.items %>
+</div>
+<div>
+  <%= render partial: "items/form", locals: {item: Item.new }%>
 </div>

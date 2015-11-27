@@ -1,7 +1,7 @@
 10.times do
   User.create!(
     email: Faker::Internet.email,
-    password: Faker::Internet.password(6, 8)
+    password: Faker::Internet.password(8, 10)
   )
 end
 users = User.all

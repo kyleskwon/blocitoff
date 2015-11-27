@@ -1,7 +1,8 @@
-<div class="media">
-   <div class="media-body">
-     <h4 class="media-heading">
-        <%= link_to item.name %>
-     </h4>
-   </div>
- </div>
+<tr id="item-<%= item.id %>">
+  <td>
+    <%= link_to item.name %>
+  </td>
+  <td>
+    <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
+  </td>
+</tr>

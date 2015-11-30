@@ -2,12 +2,13 @@
   <td>
     <%= link_to item.name %>
   </td>
-  <td>
-    <%= link_to " Complete", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
-  </td>
+
   <td>
     <small>
-      Created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago
+     <%= distance_of_time_in_words(item.created_at + 7.days,  Time.now )%>
     </small>
+  </td>
+  <td>
+    <%= link_to "", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
   </td>
 </tr>

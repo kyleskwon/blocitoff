@@ -3,5 +3,5 @@ class Item < ActiveRecord::Base
 
   validates_presence_of :name
 
-  default_scope { order('updated_at DESC') }
+  default_scope { order('updated_at ASC') }
 end

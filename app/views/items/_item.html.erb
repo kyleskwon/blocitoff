@@ -5,4 +5,9 @@
   <td>
     <%= link_to " Complete", item, method: :delete, remote: true, class: 'glyphicon glyphicon-ok' %>
   </td>
+  <td>
+    <small>
+      Created <%= distance_of_time_in_words(Time.now, item.created_at) %> ago
+    </small>
+  </td>
 </tr>
